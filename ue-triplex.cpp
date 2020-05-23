@@ -19,4 +19,11 @@ int main()
     std::cout << "The secret consists out of three numbers..." << std::endl;
     std::cout << "Their sum is: " << CodeSum << std::endl;
     std::cout << "Their product is: " << CodeProduct << std::endl;
+    std::cout << std::endl;
+
+    int PlayerGuess;
+    std::cout << "What do you reply to the guard?: ";
+    std::cin >> PlayerGuess;
+
+    std::cout << "You entered: " << PlayerGuess;
 }
