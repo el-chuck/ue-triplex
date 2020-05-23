@@ -21,9 +21,16 @@ int main()
     std::cout << "Their product is: " << CodeProduct << std::endl;
     std::cout << std::endl;
 
-    int PlayerGuess;
+    int GuessA, GuessB, GuessC;
     std::cout << "What do you reply to the guard?: ";
-    std::cin >> PlayerGuess;
+    std::cin >> GuessA;
+    std::cin >> GuessB;
+    std::cin >> GuessC;
 
-    std::cout << "You entered: " << PlayerGuess;
+    int GuessSum = GuessA + GuessB + GuessC;
+    int GuessProduct = GuessA * GuessB * GuessC;
+    
+    std::cout << "You entered: " << GuessA << " " << GuessB << " " << GuessC << std::endl;
+    std::cout << "Your sum is: " << GuessSum << std::endl;
+    std::cout << "Your product is: " << GuessProduct << std::endl;
 }
