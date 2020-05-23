@@ -35,8 +35,14 @@ int main()
     std::cout << "Your product is: " << GuessProduct << std::endl;
     std::cout << std::endl;
 
-    if (true)
+    if (GuessSum == CodeSum && GuessProduct == CodeProduct)
     {
         std::cout << "The guard nods and lets you pass. Well done!" << std::endl;
     }
+    else 
+    {
+        std::cout << "The guard raises his pike and signals you to move away" << std::endl;
+    }
+
+    return 0;
 }
