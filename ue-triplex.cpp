@@ -33,4 +33,10 @@ int main()
     std::cout << "You entered: " << GuessA << " " << GuessB << " " << GuessC << std::endl;
     std::cout << "Your sum is: " << GuessSum << std::endl;
     std::cout << "Your product is: " << GuessProduct << std::endl;
+    std::cout << std::endl;
+
+    if (true)
+    {
+        std::cout << "The guard nods and lets you pass. Well done!" << std::endl;
+    }
 }
