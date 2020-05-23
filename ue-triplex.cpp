@@ -14,6 +14,7 @@ int main()
     int sum = a + b + c;
     int product = a * b * c;
 
-    std::cout << "The sum is: " << sum << std::endl;
-    std::cout << "The product is: " << product << std::endl;
+    std::cout << "The secret consists out of three numbers...";
+    std::cout << "Their sum is: " << sum << std::endl;
+    std::cout << "Their product is: " << product << std::endl;
 }
