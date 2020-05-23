@@ -7,5 +7,8 @@ int main()
     std::cout << "A guard asks you for the secret.";
 
     int a = 4;
+    int b = 7;
+    int c = 8;
+
     std::cout << std::endl << a;
 }
