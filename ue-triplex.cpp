@@ -81,6 +81,11 @@ int main()
     {
         bool bLevelComplete = PlayGame(LevelDifficulty);
         ClearCin();
+
+        if (bLevelComplete)
+        {
+            ++LevelDifficulty;
+        }
     }
     
     return 0;
