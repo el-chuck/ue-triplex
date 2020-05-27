@@ -1,6 +1,6 @@
 #include <iostream>
 
-void PrintIntro() 
+void PrintIntro(const int Difficulty) 
 {
     std::cout <<
         "                                  |>>>\n" <<
@@ -22,13 +22,13 @@ void PrintIntro()
         "     ____--`~    '--~~__|.    |+++++__|----~    ~`---,              ___\n" <<
         "-~--~                   ~---__|,--~'                  ~~----_____-~'   `~----~~\n\n\n";
     std::cout << "Your are standing in front of the castle gates and want to get in." << std::endl;
-    std::cout << "A guard asks you for the secret." << std::endl;
+    std::cout << "A guard of military rank " << Difficulty << " asks you for the secret." << std::endl;
     std::cout << std::endl;
 }
 
-void PlayGame() 
+bool PlayGame(const int Difficulty) 
 {
-    PrintIntro();
+    PrintIntro(Difficulty);
 
     // Declare code variables
     int CodeA = 4;
@@ -59,10 +59,12 @@ void PlayGame()
     if (GuessSum == CodeSum && GuessProduct == CodeProduct)
     {
         std::cout << "The guard nods and lets you pass. Well done!\n\n";
+        return true;
     }
     else
     {
         std::cout << "The guard raises his pike and signals you to move away\n\n";
+        return false;
     }
 }
 
@@ -74,9 +76,10 @@ void ClearCin()
 
 int main()
 {
+    int LevelDifficulty = 1;
     while (true)
     {
-        PlayGame();
+        bool bLevelComplete = PlayGame(LevelDifficulty);
         ClearCin();
     }
     
