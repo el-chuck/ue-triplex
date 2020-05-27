@@ -58,12 +58,12 @@ bool PlayGame(const int Difficulty)
 
     if (GuessSum == CodeSum && GuessProduct == CodeProduct)
     {
-        std::cout << "The guard nods and lets you pass. Well done!\n\n";
+        std::cout << "The guard nods and lets you pass. Well done! But wait there is another guard approaching...\n\n";
         return true;
     }
     else
     {
-        std::cout << "The guard raises his pike and signals you to move away\n\n";
+        std::cout << "The guard raises his pike and signals you to move away.\nYou disguise yourself and try again...\n";
         return false;
     }
 }
@@ -76,8 +76,11 @@ void ClearCin()
 
 int main()
 {
+    
+    const int MaxDifficulty = 5;
     int LevelDifficulty = 1;
-    while (true)
+
+    while (LevelDifficulty <= MaxDifficulty)
     {
         bool bLevelComplete = PlayGame(LevelDifficulty);
         ClearCin();
@@ -87,6 +90,8 @@ int main()
             ++LevelDifficulty;
         }
     }
-    
+
+    std::cout << "Congratulations! You entered the castle.\n";
+
     return 0;
 }
