@@ -31,9 +31,9 @@ bool PlayGame(const int Difficulty)
     PrintIntro(Difficulty);
 
     // Declare code variables
-    int CodeA = 4;
-    int CodeB = 7;
-    int CodeC = 8;
+    int CodeA = rand() % Difficulty + 1;
+    int CodeB = rand() % Difficulty + 1;
+    int CodeC = rand() % Difficulty + 1;
 
     int CodeSum = CodeA + CodeB + CodeC;
     int CodeProduct = CodeA * CodeB * CodeC;
