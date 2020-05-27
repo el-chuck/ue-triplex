@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ctime>
 
 void PrintIntro(const int Difficulty) 
 {
@@ -31,9 +32,9 @@ bool PlayGame(const int Difficulty)
     PrintIntro(Difficulty);
 
     // Declare code variables
-    int CodeA = rand() % Difficulty + 1;
-    int CodeB = rand() % Difficulty + 1;
-    int CodeC = rand() % Difficulty + 1;
+    int CodeA = rand() % Difficulty + Difficulty;
+    int CodeB = rand() % Difficulty + Difficulty;
+    int CodeC = rand() % Difficulty + Difficulty;
 
     int CodeSum = CodeA + CodeB + CodeC;
     int CodeProduct = CodeA * CodeB * CodeC;
@@ -76,7 +77,8 @@ void ClearCin()
 
 int main()
 {
-    
+    srand(time(NULL));
+
     const int MaxDifficulty = 5;
     int LevelDifficulty = 1;
 
