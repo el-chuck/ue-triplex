@@ -58,16 +58,27 @@ void PlayGame()
 
     if (GuessSum == CodeSum && GuessProduct == CodeProduct)
     {
-        std::cout << "The guard nods and lets you pass. Well done!" << std::endl;
+        std::cout << "The guard nods and lets you pass. Well done!\n\n";
     }
     else
     {
-        std::cout << "The guard raises his pike and signals you to move away" << std::endl;
+        std::cout << "The guard raises his pike and signals you to move away\n\n";
     }
+}
+
+void ClearCin() 
+{
+    std::cin.clear();
+    std::cin.ignore();
 }
 
 int main()
 {
-    PlayGame();
+    while (true)
+    {
+        PlayGame();
+        ClearCin();
+    }
+    
     return 0;
 }
